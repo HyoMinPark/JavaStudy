@@ -31,12 +31,48 @@ public class Baseball {
 		/*
 		 * 코드 작성 스트라이크와 볼 검사 조건문 작성
 		 */
-
-		System.out.println("스트라이크 => " + strike);
-		System.out.println("볼 => " + ball);
+		if(inputNumber1 == baseball1) {
+			// 스크라이크
+			strike = strike + 1;
+		} else if(inputNumber1 == baseball2
+				|| inputNumber1 == baseball3) {
+			// 볼
+			ball++;
+		} else {
+			out += 1;
+		}
+		
+		
+		if(inputNumber2 == baseball2) {
+			// 스크라이크
+			strike = strike + 1;
+		} else if(inputNumber2 == baseball1
+				|| inputNumber2 == baseball3) {
+			// 볼
+			ball++;
+		} else {
+			out += 1;
+		}
+		
+		if(inputNumber3 == baseball3) {
+			// 스크라이크
+			strike = strike + 1;
+		} else if(inputNumber3 == baseball1
+				|| inputNumber3 == baseball2) {
+			// 볼
+			ball++;
+		} else {
+			out += 1;
+		}
+		// 아웃인 경우에는 아웃만 표시
+		if(strike == 0 && ball == 0) {
+			System.out.println("out => " + out);
+		} else {
+			System.out.println("스트라이크 => " + strike);
+			System.out.println("볼 => " + ball);
+		}
 	}
 }
-
 class Number {
 	public int get() {
 		int number = 0;

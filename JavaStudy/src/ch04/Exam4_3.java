@@ -2,7 +2,7 @@ package ch04;
 
 public class Exam4_3 {
 	public static void main(String[] args) {
-		int year = 2500;
+		int year = 2000;
 		if (year % 400 == 0) {
 			System.out.println("¿±≥‚¿‘¥œ¥Ÿ.");
 		} else if(year % 100 == 0) {
