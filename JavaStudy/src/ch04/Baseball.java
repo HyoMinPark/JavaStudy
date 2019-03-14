@@ -15,11 +15,11 @@ public class Baseball {
 		int baseball3 = number % 10;
 		int baseball2 = (number / 10) % 10;
 		int baseball1 = (number / 10 / 10) % 10;
-		
+
 		System.out.println(baseball1);
 		System.out.println(baseball2);
 		System.out.println(baseball3);
-		
+
 		Scanner s = new Scanner(System.in);
 		int inputNumber1 = s.nextInt();
 		int inputNumber2 = s.nextInt();
@@ -27,52 +27,49 @@ public class Baseball {
 
 		int strike = 0; // 스트라이크를 개수를 저장할 변수
 		int ball = 0; // 볼의 개수를 저장할 변수
-		
+		int out = 0;
 		/*
 		 * 코드 작성 스트라이크와 볼 검사 조건문 작성
 		 */
-		if(inputNumber1 == baseball1) {
+		if (inputNumber1 == baseball1) {
 			// 스크라이크
 			strike = strike + 1;
-		} else if(inputNumber1 == baseball2
-				|| inputNumber1 == baseball3) {
+		} else if (inputNumber1 == baseball2 || inputNumber1 == baseball3) {
 			// 볼
 			ball++;
 		} else {
 			out += 1;
 		}
-		
-		
-		if(inputNumber2 == baseball2) {
+
+		if (inputNumber2 == baseball2) {
 			// 스크라이크
 			strike = strike + 1;
-		} else if(inputNumber2 == baseball1
-				|| inputNumber2 == baseball3) {
+		} else if (inputNumber2 == baseball1 || inputNumber2 == baseball3) {
 			// 볼
 			ball++;
 		} else {
 			out += 1;
 		}
-		
-		if(inputNumber3 == baseball3) {
+
+		if (inputNumber3 == baseball3) {
 			// 스크라이크
 			strike = strike + 1;
-		} else if(inputNumber3 == baseball1
-				|| inputNumber3 == baseball2) {
+		} else if (inputNumber3 == baseball1 || inputNumber3 == baseball2) {
 			// 볼
 			ball++;
 		} else {
 			out += 1;
 		}
 		// 아웃인 경우에는 아웃만 표시
-		if(strike == 0 && ball == 0) {
+		if (strike == 0 && ball == 0) {
 			System.out.println("out => " + out);
 		} else {
 			System.out.println("스트라이크 => " + strike);
-			System.out.println("볼 => " + ball);
+			System.out.print("볼 => " + ball);
 		}
 	}
 }
+
 class Number {
 	public int get() {
 		int number = 0;
