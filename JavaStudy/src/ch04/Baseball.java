@@ -65,7 +65,7 @@ public class Baseball {
 			System.out.println("out => " + out);
 		} else {
 			System.out.println("스트라이크 => " + strike);
-			System.out.print("볼 => " + ball);
+			System.out.println("볼 => " + ball);
 		}
 	}
 }
